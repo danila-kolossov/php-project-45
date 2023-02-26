@@ -1,0 +1,21 @@
+{
+    "name": "hexlet/code",
+    "description": "hexlet study project",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Danila Kolossov",
+            "email": "danila.kolossov@gmail.com"
+        }
+    ],
+    "require": {},
+    "bin":  [
+	"bin/brain-games"
+    ]
+}
