@@ -39,6 +39,27 @@ function generateCalcExpression(): array
     return array($expression, $answer);
 }
 
+function generateProgression(): array
+{
+    $n = rand(5, 10);
+    $hidden = rand(0, $n - 1);
+    $diff = rand(1, 10);
+    $start = rand(0, 20);
+    $members = [];
+    $answer = null;
+
+    for ($i = 0; $i < $n; $i++) {
+        if ($i === $hidden) {
+            $members[] = '..';
+            $answer = $start;
+        } else {
+            $members[] = $start;
+        }
+        $start += $diff;
+    }
+    return array(implode(' ', $members), $answer);
+}
+
 function gcd(int $a, int $b): int
 {
     return ($a % $b) ? gcd($b, $a % $b) : $b;
