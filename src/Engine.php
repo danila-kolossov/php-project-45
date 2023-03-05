@@ -41,7 +41,7 @@ function generateCalcExpression(): array
 
 function generatePrime(): array
 {
-    $a = rand(1, 100);
+    $a = rand(3, 100);
     $answer = 'no';
     if (isPrime($a)) {
         $answer = 'yes';
