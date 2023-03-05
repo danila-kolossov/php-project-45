@@ -111,5 +111,6 @@ function question(string $question, string $answer): bool
         return true;
     }
     line("'$userAnswer' is wrong answer ;(. Correct answer was '$answer'.\nLet's try again, Bill!");
-    return false;
+    exit;
+//    return false;
 }
