@@ -39,6 +39,16 @@ function generateCalcExpression(): array
     return array($expression, $answer);
 }
 
+function generatePrime(): array
+{
+    $a = rand(1, 100);
+    $answer = 'no';
+    if (isPrime($a)) {
+        $answer = 'yes';
+    }
+    return array($a, $answer);
+}
+
 function generateProgression(): array
 {
     $n = rand(5, 10);
@@ -80,6 +90,16 @@ function getName(): string
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     return $name;
+}
+
+function isPrime(int $a): bool
+{
+    for ($i = 2; $i < $a; $i++) {
+        if ($a % $i === 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
 function question(string $question, string $answer): bool
