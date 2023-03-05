@@ -39,6 +39,20 @@ function generateCalcExpression(): array
     return array($expression, $answer);
 }
 
+function gcd(int $a, int $b): int
+{
+    return ($a % $b) ? gcd($b, $a % $b) : $b;
+}
+
+function generateGCD(): array
+{
+    $a = rand(0, 100);
+    $b = rand(0, 100);
+    $expression = "$a $b";
+    $answer = gcd($a, $b);
+    return array($expression, $answer);
+}
+
 function getName(): string
 {
     line('Welcome to the Brain Game!');
