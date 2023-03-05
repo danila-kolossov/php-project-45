@@ -4,7 +4,10 @@
     "type": "project",
     "license": "proprietary",
     "autoload": {
-        "files": [ "src/Cli.php" ]
+        "files": [
+            "src/Cli.php",
+            "src/Engine.php"
+        ]
     },
     "authors": [
         {
@@ -17,6 +20,7 @@
     },
     "bin":  [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ]
 }

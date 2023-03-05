@@ -1,6 +1,9 @@
 install:
 	composer install
 
+brain-calc:
+	./bin/brain-calc
+
 brain-even:
 	./bin/brain-even
 
