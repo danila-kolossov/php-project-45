@@ -87,7 +87,7 @@ function generateGCD(): array
 function getName(): string
 {
     line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
+    $name = prompt('May I have your name?', false, ' ');
     line("Hello, %s!", $name);
     return $name;
 }
@@ -105,7 +105,7 @@ function isPrime(int $a): bool
 function question(string $question, string $answer): bool
 {
     line("Question: $question");
-    $userAnswer = prompt('Your answer: ');
+    $userAnswer = prompt('Your answer');
     if ($userAnswer === $answer) {
         line('Correct!');
         return true;

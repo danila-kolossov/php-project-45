@@ -8,7 +8,7 @@ use function cli\prompt;
 function getName(): string
 {
     line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
+    $name = prompt('May I have your name?', false, ' ');
     line("Hello, %s!", $name);
     return $name;
 }
