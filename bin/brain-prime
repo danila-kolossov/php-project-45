@@ -23,7 +23,7 @@ for ($i = 0; $i < 3; $i++) {
     $tasks[] = generatePrime();
 }
 
-$error = game('Answer "yes" if given number is prime. Otherwise answer "no".', $tasks);
+$error = game('Answer "yes" if given number is prime. Otherwise answer "no".', $tasks, $name);
 
 if (!$error) {
     line("Congratulations, $name!");

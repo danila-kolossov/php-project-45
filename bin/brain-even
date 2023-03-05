@@ -32,7 +32,8 @@ for ($i = 0; $i < 3; $i++) {
     if ($answer === $correct) {
         line("Correct!");
     } else {
-        line("'$answer' is wrong answer ;(. Correct answer was '$correct'.\nLet's try again, Bill!");
+        line("'$answer' is wrong answer ;(. Correct answer was '$correct'.\nLet's try again, $name!");
+        exit;
         $error++;
     }
 }

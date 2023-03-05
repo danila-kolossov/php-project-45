@@ -15,14 +15,14 @@ function calc(int $a, int $b, string $op): ?int
     };
 }
 
-function game(string $description, array $tasks): bool|int
+function game(string $description, array $tasks, string $name): bool|int
 {
     line($description);
 
     $error = 0;
 
     foreach ($tasks as $task) {
-        $error += question($task[0], $task[1]);
+        $error += question($task[0], $task[1], $name);
     }
 
     return $error;
@@ -102,7 +102,7 @@ function isPrime(int $a): bool
     return true;
 }
 
-function question(string $question, string $answer): bool
+function question(string $question, string $answer, string $name): bool
 {
     line("Question: $question");
     $userAnswer = prompt('Your answer');
@@ -110,7 +110,6 @@ function question(string $question, string $answer): bool
         line('Correct!');
         return true;
     }
-    line("'$userAnswer' is wrong answer ;(. Correct answer was '$answer'.\nLet's try again, Bill!");
+    line("'$userAnswer' is wrong answer ;(. Correct answer was '$answer'.\nLet's try again, $name!");
     exit;
-//    return false;
 }

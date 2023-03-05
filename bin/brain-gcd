@@ -23,7 +23,7 @@ for ($i = 0; $i < 3; $i++) {
     $tasks[] = generateGCD();
 }
 
-$error = game('Find the greatest common divisor of given numbers.', $tasks);
+$error = game('Find the greatest common divisor of given numbers.', $tasks, $name);
 
 if (!$error) {
     line("Congratulations, $name!");

@@ -23,7 +23,7 @@ for ($i = 0; $i < 3; $i++) {
     $tasks[] = generateProgression();
 }
 
-$error = game('What number is missing in the progression?', $tasks);
+$error = game('What number is missing in the progression?', $tasks, $name);
 
 if (!$error) {
     line("Congratulations, $name!");

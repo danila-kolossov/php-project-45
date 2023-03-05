@@ -23,7 +23,7 @@ for ($i = 0; $i < 3; $i++) {
     $tasks[] = generateCalcExpression();
 }
 
-$error = game('What is the result of the expression?', $tasks);
+$error = game('What is the result of the expression?', $tasks, $name);
 
 if (!$error) {
     line("Congratulations, $name!");
