@@ -25,6 +25,10 @@ function game(string $description, array $tasks, string $name): bool|int
         $error += question($task[0], $task[1], $name);
     }
 
+    if (!$error) {
+        line("Congratulations, $name!");
+    }
+
     return $error;
 }
 
