@@ -22,11 +22,7 @@ function game(string $description, array $tasks, string $name): bool|int
     $error = 0;
 
     foreach ($tasks as $task) {
-        $error += question($task[0], $task[1], $name);
-    }
-
-    if (!$error) {
-        line("Congratulations, $name!");
+        $error += question($task[0], $task[1], $name) ? 0 : 1;
     }
 
     return $error;
