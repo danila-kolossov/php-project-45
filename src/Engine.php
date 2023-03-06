@@ -15,7 +15,7 @@ function calc(int $a, int $b, string $op): ?int
     };
 }
 
-function game(string $description, array $tasks, string $name): bool|int
+function game(string $description, array $tasks, string $name): int
 {
     line($description);
 
@@ -72,7 +72,7 @@ function generateProgression(): array
 
 function gcd(int $a, int $b): int
 {
-    return ($a % $b) ? gcd($b, $a % $b) : $b;
+    return ($a % $b) !== 0 ? gcd($b, $a % $b) : $b;
 }
 
 function generateGCD(): array
@@ -87,7 +87,7 @@ function generateGCD(): array
 function getName(): string
 {
     line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?', false, ' ');
+    $name = prompt('May I have your name?', 'Noname', ' ');
     line("Hello, %s!", $name);
     return $name;
 }
